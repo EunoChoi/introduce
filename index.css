@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.header a {
+    color: whitesmoke;
+}
+
+.main a {
+    color: salmon;
+}
+
+body {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+}
+
+.header {
+    background-color: steelblue;
+    height: 100vh;
+    width: 300px;
+    transition: 1s ease-in-out all;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+}
+
+.name {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.link {
+    font-weight: 600;
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+    color: whitesmoke;
+}
+
+.main {
+    margin-top: 70px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    height: calc(100vh - 70px);
+
+    width: calc(100vw - 300px);
+    background-color: whitesmoke;
+}
+
+.main nav {
+    color: salmon;
+    font-size: 24px;
+    font-weight: 600;
+    position: fixed;
+    top: 0px;
+    padding: 0px 120px;
+    box-sizing: border-box;
+
+    width: calc(100vw - 300px);
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: whitesmoke;
+
+}
+
+.main nav span {
+    transition: 0.2s ease-in-out all;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.main nav span:hover {
+    font-size: 40px;
+}
+
+
+.main>div {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 20px;
+    margin: 10px auto;
+    /* background-color: tomato; */
+}
+
+.main>div>div span {
+    color: darkgray;
+}
+
+
+.main>div>div {
+    font-size: 24px;
+    margin: 10px auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    color: gray;
+    font-size: 40px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+p {
+    margin-top: 20px;
+}
+
+.profile {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 8px solid salmon;
+
+    margin: 50px 0px 50px 0px;
+}
+
+#darkModeButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: salmon;
+
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+@media (max-width : 800px) {
+    body {
+        flex-direction: column;
+    }
+
+    .header {
+        width: 100vw;
+        height: 300px;
+    }
+
+    .main {
+        margin-top: 0px;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 50px;
+    }
+
+    .main nav {
+        padding: 0 50px;
+        position: static;
+        top: 0px;
+        width: 100%;
+    }
+
+    .main div {
+        width: 80%;
+    }
+
+    .profile {
+        margin: 20px;
+        width: 120px;
+        height: 120px;
+    }
+}
